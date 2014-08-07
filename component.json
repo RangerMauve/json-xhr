@@ -1,0 +1,17 @@
+{
+  "name": "json-xhr",
+  "repo": "RangerMauve/json-xhr",
+  "description": "Promise-based library for working with JSON HTTP APIs",
+  "version": "1.0.0",
+  "keywords": [],
+  "dependencies": {
+    "then/promise": "*",
+    "sindresorhus/query-string": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ]
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<title>Example</title>
+<main>The component you're using is called</main>
+<script src="build/build.js"></script>
+<script>
+	var main = document.querySelector("main");
+	var jshr = require("json-xhr");
+	jshr.get("component.json")
+		.then(get_response)
+		.then(get_name)
+		.then(append_name)
+		.catch(handle_error)
+
+	function get_response(result){
+		console.log(result);
+		return result.response;
+	}
+	function handle_error(err){
+		main.innerHTML = "<h1>Error: "+err.message+"</h1>"
+	}
+	function get_name(obj){
+		return obj.name;
+	}
+	function append_name(name){
+		main.innerHTML += " <b>"+name+"</b>";
+	}
+</script>
