@@ -9,9 +9,58 @@
 
     $ component install RangerMauve/json-xhr
 
+  You can build a UMD-compatible bundle for use in other applications with:
+
+    $ component build -s json_xhr
+
 ## API
 
+``` javascript
+    var jshr = require("json-xhr");
+    jshr.get("http://example.com/foobar.json").then(function(result){
+        var foobar = result.response;
+        // foobar is a JS object that was parsed from foobar.json
+    }).catch(function(e){
+        alert("Error:"+e.message);
+        // e is an Error object with the added properties for the request/reponse data and status
+    })
+```
 
+### json_xhr(varb,url,data)
+
+Sends a `verb request to the specified URL.
+If the verb is GET, it turns the data into a querystring which is appended to the URL.
+Otherwise the data is stringified and sent as the body of the request.
+The return value is a Promise (the then/promise implementation in this case) which resolves to an object that looks like:
+``` javascript
+    {
+        status: "the status code of the response",
+        response: "the JSON.parse'd response body or an empty object if there was no body",
+        request: "the XMLHttpRequest instance used for the request"
+    }
+```
+
+If there was an error it rejects with it, if the error was the result of an Error-like status code (4xx or 5xx),
+then it will reject to an Error object with the following added properties:
+``` javascript
+    {
+        status: "the status code of the response",
+        response: "the JSON.parse'd response body or an empty object if there was no body",
+        request: "the XMLHttpRequest instance used for the request"
+    }
+```
+
+### json_xhr(verb, url)
+
+Same as above, but the data is set to an empty object
+
+### json_xhr(url, data)
+
+Same as the first version, but it sets the verb to `GET`
+
+### json_xhr[get, post, put, delete]
+
+Shorthand for different verbs, acts the same as `json_xhr(url,data)`
 
 ## License
 
