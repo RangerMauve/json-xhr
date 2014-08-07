@@ -26,7 +26,7 @@
     })
 ```
 
-### json_xhr(varb,url,data)
+### json_xhr(verb,url,data)
 
 Sends a `verb request to the specified URL.
 If the verb is GET, it turns the data into a querystring which is appended to the URL.
