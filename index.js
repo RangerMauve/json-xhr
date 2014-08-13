@@ -22,6 +22,7 @@ function json_xhr(verb, url, data) {
 		var qs = "";
 		var is_get = (verb === _get);
 		if (is_get) qs = querystring.stringify(data);
+		if (qs) qs = "?" + qs;
 		else try {
 			to_send = JSON.stringify(data);
 		} catch (e) {
