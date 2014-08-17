@@ -2,7 +2,7 @@
   "name": "json-xhr",
   "repo": "RangerMauve/json-xhr",
   "description": "Promise-based library for working with JSON HTTP APIs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "keywords": [],
   "dependencies": {
     "then/promise": "*",
