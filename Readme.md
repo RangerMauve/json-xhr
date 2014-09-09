@@ -9,7 +9,13 @@
 
     $ component install RangerMauve/json-xhr
 
-  You can build a UMD-compatible bundle for use in other applications with:
+  Install with [bower](http://bower.io/):
+
+    $ bower install json-xhr
+
+  Then link to build/build.js in your HTML, if no module loader is present it'll make a global called `json_xhr`
+
+  You can also build a UMD-compatible bundle for use in other applications with:
 
     $ component build -s json_xhr
 

@@ -1,0 +1,28 @@
+{
+  "name": "json-xhr",
+  "main": "build/build.js",
+  "version": "1.0.2",
+  "homepage": "https://github.com/RangerMauve/json-xhr",
+  "authors": [
+    "RangerMauve <RangerMauve@htomail.com>"
+  ],
+  "description": "Promise-based library for working with JSON HTTP APIs",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "xhr",
+    "json",
+    "promise"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
