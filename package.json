@@ -1,0 +1,28 @@
+{
+  "name": "json-xhr",
+  "version": "0.0.0",
+  "description": "Promise-based library for working with JSON HTTP APIs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/RangerMauve/json-xhr.git"
+  },
+  "keywords": [
+    "xhr",
+    "json",
+    "http"
+  ],
+  "author": "RangerMauve",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RangerMauve/json-xhr/issues"
+  },
+  "homepage": "https://github.com/RangerMauve/json-xhr",
+  "dependencies": {
+    "promise": "^6.0.0",
+    "query-string": "^1.0.0"
+  }
+}
